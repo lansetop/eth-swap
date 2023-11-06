@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract DataStorage {
+    // 存储数据的映射
+    mapping(string => string) private dataStore;
+
+    // 设置数据
+    function setData(string memory key, string memory value) public {
+        dataStore[key] = value;
+    }
+
+    // 获取数据
+    function getData(string memory key) public view returns (string memory) {
+        return dataStore[key];
+    }
+}
